@@ -30,4 +30,14 @@ public class SonarTest {
         }
         return k + "";
     }
+
+    public int lengthPlus(String str) {
+        int len = 2;
+        try {
+            len += str.length();
+        } catch (NullPointerException e) {
+            System.out.println("argument was null");
+        }
+        return len;
+    }
 }
