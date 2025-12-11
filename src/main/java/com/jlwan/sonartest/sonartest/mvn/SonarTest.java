@@ -18,8 +18,9 @@ public class SonarTest {
      */
     public static void main(String[] args) {
         String s = "a:b";
+        //越界
         System.out.println(s.substring(0, s.lastIndexOf(":")));
-
+        //空指针
         int b = getString(System.currentTimeMillis()).length();
         System.out.println(b);
     }
