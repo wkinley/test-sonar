@@ -17,17 +17,20 @@ public class SonarTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String s = "a:b";
+        String s = getString(System.currentTimeMillis());
         //越界
         System.out.println(s.substring(0, s.lastIndexOf(":")));
         //空指针
-        int b = getString(System.currentTimeMillis()).length();
+        int b = s.length();
         System.out.println(b);
     }
 
     public static String getString(long k) {
-        if (k % 2 == 0) {
+        long i = k % 3;
+        if (i == 0) {
             return null;
+        } else if (i == 1) {
+            return "a:b";
         }
         return k + "";
     }
